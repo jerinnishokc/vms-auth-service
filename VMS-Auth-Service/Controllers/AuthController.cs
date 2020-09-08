@@ -37,8 +37,9 @@ namespace VMS_Auth_Service.Controllers
             };
 
             var createdUser = await _authRepo.Register(userToCreate, userForRegisterDto.Password);
-             
-            return StatusCode(201);
+
+            //return StatusCode(201);
+            return Ok();
         }
 
         [HttpPost("login")]
